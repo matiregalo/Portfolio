@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 import NavBar from "./components/layout/NavBar/NavBar";
+import Home from "./components/pages/Home/Home";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <BrowserRouter>
               <NavBar />
               <Routes>
-             <Route path="/home" element={<SobreNosotros />} />
+             <Route path="/home" element={<Home />} />
               </Routes>
       </BrowserRouter>
 
