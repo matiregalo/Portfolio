@@ -82,6 +82,12 @@
   transition: transform 0.3s ease;
 }
 
+.tech-icon-img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
 .tech-item:hover .tech-icon {
   transform: scale(1.1);
 }

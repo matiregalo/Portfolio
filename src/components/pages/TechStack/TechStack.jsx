@@ -19,36 +19,6 @@ import {
 } from "react-icons/si";
 import "./TechStack.css";
 
-// Custom icons for technologies not available in react-icons
-const JavaIcon = () => (
-  <div
-    className="tech-icon"
-    style={{
-      width: "2.5rem",
-      height: "2.5rem",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "2rem",
-      fontWeight: "bold",
-      color: "#ED8B00",
-    }}
-  >
-    ☕
-  </div>
-);
-
-const CSharpIcon = () => (
-  <svg
-    className="tech-icon"
-    viewBox="0 0 24 24"
-    fill="#239120"
-    xmlns="http://www.w3.org/2000/svg"
-    style={{ width: "2.5rem", height: "2.5rem" }}
-  >
-    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16c.169.169.169.44 0 .609l-1.44 1.44c-.169.169-.44.169-.609 0l-1.44-1.44c-.169-.169-.169-.44 0-.609l1.44-1.44c.169-.169.44-.169.609 0l1.44 1.44zm-9.136 0c.169.169.169.44 0 .609l-1.44 1.44c-.169.169-.44.169-.609 0L5.04 8.769c-.169-.169-.169-.44 0-.609l1.44-1.44c.169-.169.44-.169.609 0l1.44 1.44zm4.568 0c.169.169.169.44 0 .609l-1.44 1.44c-.169.169-.44.169-.609 0L9.608 8.769c-.169-.169-.169-.44 0-.609l1.44-1.44c.169-.169.44-.169.609 0l1.44 1.44z" />
-  </svg>
-);
 
 const TechStack = () => {
   const location = useLocation();
@@ -73,7 +43,7 @@ const TechStack = () => {
           property="og:description"
           content="Matías Regaló - Stack tecnológico completo: React, JavaScript, Node.js, Express, MongoDB, .NET, C#, Java y más tecnologías modernas para desarrollo Full Stack."
         />
-        <meta property="og:site_name" content="Portfolio | Matías Regaló" />
+        <meta property="og:site_name" content="Tech Stack | Matías Regaló" />
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content={currentUrl} />
@@ -122,11 +92,19 @@ const TechStack = () => {
                         <span>.NET</span>
                       </div>
                       <div className="tech-item">
-                        <CSharpIcon />
+                        <img 
+                          src="/icons/c-sharp.png" 
+                          alt="C#" 
+                          className="tech-icon tech-icon-img"
+                        />
                         <span>C#</span>
                       </div>
                       <div className="tech-item">
-                        <JavaIcon />
+                        <img 
+                          src="/icons/java.png" 
+                          alt="Java" 
+                          className="tech-icon tech-icon-img"
+                        />
                         <span>Java</span>
                       </div>
                       <div className="tech-item">
@@ -191,11 +169,19 @@ const TechStack = () => {
                         <span>.NET</span>
                       </div>
                       <div className="tech-item">
-                        <CSharpIcon />
+                        <img 
+                          src="/icons/c-sharp.png" 
+                          alt="C#" 
+                          className="tech-icon tech-icon-img"
+                        />
                         <span>C#</span>
                       </div>
                       <div className="tech-item">
-                        <JavaIcon />
+                        <img 
+                          src="/icons/java.png" 
+                          alt="Java" 
+                          className="tech-icon tech-icon-img"
+                        />
                         <span>Java</span>
                       </div>
                       <div className="tech-item">
