@@ -11,6 +11,7 @@ const Home = () => {
     <div className="home-container">
       <Helmet>
         <title>Home | Matías Regaló</title>
+        <link rel="icon" type="image/png" href="/logoMRTransparente.png" />
         <meta
           name="description"
           content="Matías Regaló - Desarrollador web especializado en desarrollo de software a medida, aplicaciones web modernas y soluciones tecnológicas personalizadas. Portfolio profesional con proyectos destacados."

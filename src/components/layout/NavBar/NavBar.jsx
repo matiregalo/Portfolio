@@ -30,7 +30,7 @@ const NavBar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item mx-2">
-                <Link className="nav-link text-dark" to="/home" id="link-home">
+                <Link className="nav-link text-dark" to="/" id="link-home">
                   Home
                 </Link>
               </li>
