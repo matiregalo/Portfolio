@@ -46,7 +46,7 @@ const Home = () => {
             <p className="hero-subtitle">
               Full Stack Developer Jr | Bachelor of System Engineering
             </p>
-            
+
             <div className="social-links">
               <div className="d-flex justify-content-center gap-3 flex-wrap">
                 <a

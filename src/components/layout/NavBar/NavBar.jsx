@@ -34,9 +34,26 @@ const NavBar = () => {
                   Home
                 </Link>
               </li>
+              <li className="nav-item mx-2">
+                <Link
+                  className="nav-link text-dark"
+                  to="/about"
+                  id="link-about"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="nav-item mx-2">
+                <Link
+                  className="nav-link text-dark"
+                  to="/techStack"
+                  id="link-techStack"
+                >
+                  Tech Stack
+                </Link>
+              </li>
             </ul>
-            <div className="navbar-icons">
-            </div>
+            <div className="navbar-icons"></div>
           </div>
         </div>
       </nav>

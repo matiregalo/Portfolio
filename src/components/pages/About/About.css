@@ -1,0 +1,332 @@
+.about-container {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+/* Image Section */
+.about-image-wrapper {
+  position: relative;
+  animation: fadeInLeft 0.8s ease-out;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(13, 110, 253, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.about-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(13, 110, 253, 0.3);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 110, 253, 0.1) 0%,
+    rgba(102, 16, 242, 0.1) 100%
+  );
+  border-radius: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.about-image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Content Section */
+.about-content {
+  animation: fadeInRight 0.8s ease-out 0.2s both;
+  padding-left: 2rem;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #212529;
+}
+
+.about-text-section {
+  margin-top: 2rem;
+}
+
+.about-paragraph {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.about-paragraph:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-text-section p {
+  line-height: 1.8;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+.about-text-section h4 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.about-text-section strong {
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* Skills Section */
+.skills-section {
+  padding-top: 2rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(102, 16, 242, 0.1) 100%);
+  color: #0d6efd;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+  border-color: #0d6efd;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-content {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem 0;
+  }
+
+  .about-image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-content {
+    text-align: center;
+    padding-top: 1.5rem;
+  }
+
+  .about-text-section {
+    margin-top: 1.5rem;
+  }
+
+  .skills-section {
+    text-align: center;
+  }
+
+  .skills-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  .about-text-section p {
+    font-size: 1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* Technology Stack Carousel */
+.tech-stack-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e9ecef;
+}
+
+.tech-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.tech-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.tech-carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  position: relative;
+  animation: scroll 30s linear infinite !important;
+  -webkit-animation: scroll 30s linear infinite !important;
+  will-change: transform;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  width: 120px;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(13, 110, 253, 0.05) 0%,
+    rgba(102, 16, 242, 0.05) 100%
+  );
+  border-radius: 1rem;
+  border: 2px solid rgba(13, 110, 253, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-item:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 110, 253, 0.1) 0%,
+    rgba(102, 16, 242, 0.1) 100%
+  );
+  border-color: rgba(13, 110, 253, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.2);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover .tech-icon {
+  transform: scale(1.1);
+}
+
+.tech-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #212529;
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Pause animation on hover */
+.tech-carousel-wrapper:hover .tech-carousel-track {
+  animation-play-state: paused !important;
+}
+
+/* Force animation even with reduced motion preference */
+/* El carrusel es esencial para mostrar el stack de tecnologías */
+@media (prefers-reduced-motion: reduce) {
+  .tech-carousel-track {
+    /* Mantener la animación pero más lenta para accesibilidad */
+    animation: scroll 60s linear infinite !important;
+    -webkit-animation: scroll 60s linear infinite !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .tech-item {
+    width: 100px;
+    padding: 0.75rem 1rem;
+  }
+
+  .tech-icon {
+    font-size: 2rem;
+  }
+
+  .tech-item span {
+    font-size: 0.8rem;
+  }
+
+  .tech-carousel-track {
+    gap: 1.5rem;
+  }
+}
