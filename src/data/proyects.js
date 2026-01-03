@@ -5,5 +5,7 @@ const proyects = [
         description:"",
         image:"",
         stackTecnologias: [],
+        linkWebsite: "",
+        linkGithub: "",
     }
 ]
