@@ -1,11 +1,11 @@
 const proyects = [
     {
         id:1,
-        name:"",
-        description:"",
-        image:"",
-        stackTecnologias: [],
-        linkWebsite: "",
-        linkGithub: "",
+        name:"AAAAAAAA",
+        description:"AAAAAAAAAA",
+        image:"AAAAAAAAAAA",
+        stackTecnologias: ["AS", "AA"],
+        linkWebsite: "AA",
+        linkGithub: "AAA",
     }
 ]
