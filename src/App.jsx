@@ -5,6 +5,7 @@ import NavBar from "./components/layout/NavBar/NavBar";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import TechStack from "./components/pages/TechStack/TechStack";
+import Contact from "./components/pages/Contact/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/techStack" element={<TechStack />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>
