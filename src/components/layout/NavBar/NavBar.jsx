@@ -52,7 +52,7 @@ const NavBar = () => {
                   Tech Stack
                 </Link>
               </li>
-                <li className="nav-item mx-2">
+              <li className="nav-item mx-2">
                 <Link
                   className="nav-link text-dark"
                   to="/contact"

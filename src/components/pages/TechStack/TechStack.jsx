@@ -19,7 +19,6 @@ import {
 } from "react-icons/si";
 import "./TechStack.css";
 
-
 const TechStack = () => {
   const location = useLocation();
   const baseUrl = window.location.origin;
@@ -92,17 +91,17 @@ const TechStack = () => {
                         <span>.NET</span>
                       </div>
                       <div className="tech-item">
-                        <img 
-                          src="/icons/c-sharp.png" 
-                          alt="C#" 
+                        <img
+                          src="/icons/c-sharp.png"
+                          alt="C#"
                           className="tech-icon tech-icon-img"
                         />
                         <span>C#</span>
                       </div>
                       <div className="tech-item">
-                        <img 
-                          src="/icons/java.png" 
-                          alt="Java" 
+                        <img
+                          src="/icons/java.png"
+                          alt="Java"
                           className="tech-icon tech-icon-img"
                         />
                         <span>Java</span>
@@ -169,17 +168,17 @@ const TechStack = () => {
                         <span>.NET</span>
                       </div>
                       <div className="tech-item">
-                        <img 
-                          src="/icons/c-sharp.png" 
-                          alt="C#" 
+                        <img
+                          src="/icons/c-sharp.png"
+                          alt="C#"
                           className="tech-icon tech-icon-img"
                         />
                         <span>C#</span>
                       </div>
                       <div className="tech-item">
-                        <img 
-                          src="/icons/java.png" 
-                          alt="Java" 
+                        <img
+                          src="/icons/java.png"
+                          alt="Java"
                           className="tech-icon tech-icon-img"
                         />
                         <span>Java</span>

@@ -17,7 +17,11 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(13, 110, 253, 0.03) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(13, 110, 253, 0.03) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -30,7 +34,11 @@
   left: -5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(102, 16, 242, 0.02) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(102, 16, 242, 0.02) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -65,7 +73,7 @@
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 1rem;
-  animation: fadeInUp 0.8s ease-out 0.2s both;
+  animation: fadeInUp 0.8s ease-out 0.15s both;
 }
 
 .hero-name {
@@ -95,14 +103,14 @@
   color: var(--text-secondary);
   font-weight: 300;
   margin-bottom: 3rem;
-  animation: fadeInUp 0.8s ease-out 0.4s both;
+  animation: fadeInUp 0.8s ease-out 0.25s both;
   letter-spacing: 0.02em;
   line-height: 1.6;
 }
 
 /* Social Links */
 .social-links {
-  animation: fadeInUp 0.8s ease-out 0.6s both;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
   margin-top: 2rem;
 }
 
@@ -241,7 +249,7 @@
     min-height: calc(100vh - 150px);
     padding: var(--section-padding-mobile);
   }
-  
+
   .home-container::before,
   .home-container::after {
     display: none;

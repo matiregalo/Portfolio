@@ -4,8 +4,6 @@ import profileImage from "../../../assets/matiasregaloimagen.jpg";
 
 import "./About.css";
 
-
-
 const About = () => {
   const location = useLocation();
   const baseUrl = window.location.origin;
@@ -58,37 +56,48 @@ const About = () => {
               <h2 className="about-title mb-4">
                 About <span className="text-primary">Me</span>
               </h2>
-              
+
               <div className="about-text-section">
                 <div className="about-paragraph mb-4">
                   <p className="text-dark">
-                    I am an advanced Systems Engineering student (3rd year / 5th semester at ORT) 
-                    specializing in Full Stack development. I am an expert in <strong>React</strong>,{" "}
-                    <strong>JavaScript</strong> (ES6+), <strong>HTML5</strong>, <strong>CSS</strong>,{" "}
-                    <strong>Bootstrap</strong>, <strong>Node.js</strong>, <strong>Express.js</strong>,{" "}
-                    <strong>Java</strong>, <strong>C# (.NET)</strong>, <strong>SQL</strong>, and{" "}
-                    <strong>MongoDB</strong>. I hold certifications in <strong>React</strong> and{" "}
-                    <strong>Backend with Node.js</strong> (recognized as one of the top 10 best students 
-                    in both courses), and my experience includes projects implementing{" "}
-                    <strong>RESTful APIs</strong>, <strong>WebSockets</strong>, <strong>JWT</strong>{" "}
-                    authentication, <strong>microservices</strong>, and <strong>Docker</strong> deployments.
+                    I am an advanced Systems Engineering student (3rd year / 5th
+                    semester at ORT) specializing in Full Stack development. I
+                    am an expert in <strong>React</strong>,{" "}
+                    <strong>JavaScript</strong> (ES6+), <strong>HTML5</strong>,{" "}
+                    <strong>CSS</strong>, <strong>Bootstrap</strong>,{" "}
+                    <strong>Node.js</strong>, <strong>Express.js</strong>,{" "}
+                    <strong>Java</strong>, <strong>C# (.NET)</strong>,{" "}
+                    <strong>SQL</strong>, and <strong>MongoDB</strong>. I hold
+                    certifications in <strong>React</strong> and{" "}
+                    <strong>Backend with Node.js</strong> (recognized as one of
+                    the top 10 best students in both courses), and my experience
+                    includes projects implementing <strong>RESTful APIs</strong>
+                    , <strong>WebSockets</strong>, <strong>JWT</strong>{" "}
+                    authentication, <strong>microservices</strong>, and{" "}
+                    <strong>Docker</strong> deployments.
                   </p>
                   <p className="text-dark mb-2">
-                    In <strong>Frontend</strong>, I design and build interactive and responsive user 
-                    interfaces with reusable components. In <strong>Backend</strong>, I implement server 
-                    architecture and scalable solutions. For <strong>Databases</strong>, I have experience 
-                    with MongoDB (Mongoose), SQL Server, Oracle SQL Developer, and Firebase/Firestore – 
-                    including schema design, optimized queries, and indexing.
+                    In <strong>Frontend</strong>, I design and build interactive
+                    and responsive user interfaces with reusable components. In{" "}
+                    <strong>Backend</strong>, I implement server architecture
+                    and scalable solutions. For <strong>Databases</strong>, I
+                    have experience with MongoDB (Mongoose), SQL Server, Oracle
+                    SQL Developer, and Firebase/Firestore – including schema
+                    design, optimized queries, and indexing.
                   </p>
                   <p className="text-dark mb-0">
-                    I apply <strong>Clean Code</strong>, <strong>SOLID principles</strong>,{" "}
-                    <strong>MVC architecture</strong>, and <strong>design patterns</strong> (GRASP/GoF) 
-                    to create maintainable code. I am proficient in <strong>testing</strong> with{" "}
-                    <strong>Cypress</strong> following TDD practices, use <strong>Git/GitHub</strong> for 
-                    version control, and specialize in creating scalable solutions that follow best 
-                    practices and industry standards. I am a Full Stack Developer Jr passionate about 
-                    creating digital innovation experiences, with +2 years of experience creating 
-                    user-centered applications.
+                    I apply <strong>Clean Code</strong>,{" "}
+                    <strong>SOLID principles</strong>,{" "}
+                    <strong>MVC architecture</strong>, and{" "}
+                    <strong>design patterns</strong> (GRASP/GoF) to create
+                    maintainable code. I am proficient in{" "}
+                    <strong>testing</strong> with <strong>Cypress</strong>{" "}
+                    following TDD practices, use <strong>Git/GitHub</strong> for
+                    version control, and specialize in creating scalable
+                    solutions that follow best practices and industry standards.
+                    I am a Full Stack Developer Jr passionate about creating
+                    digital innovation experiences, with +2 years of experience
+                    creating user-centered applications.
                   </p>
                 </div>
               </div>

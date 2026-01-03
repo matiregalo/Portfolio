@@ -8,12 +8,12 @@
   --primary-blue-hover: #0b5ed7;
   --primary-blue-light: rgba(13, 110, 253, 0.1);
   --primary-blue-ultra-light: rgba(13, 110, 253, 0.02);
-  
+
   --primary-purple: #6610f2;
   --primary-purple-hover: #5509d1;
   --primary-purple-light: rgba(102, 16, 242, 0.1);
   --primary-purple-ultra-light: rgba(102, 16, 242, 0.02);
-  
+
   /* Neutral Colors */
   --white: #ffffff;
   --gray-50: #f8f9fa;
@@ -26,31 +26,39 @@
   --gray-700: #343a40;
   --gray-800: #212529;
   --gray-900: #000000;
-  
+
   /* Section Backgrounds - Varied but consistent */
   --bg-home: #ffffff;
   --bg-about: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-  --bg-techstack: linear-gradient(135deg, rgba(13, 110, 253, 0.03) 0%, rgba(255, 255, 255, 1) 100%);
-  --bg-contact: linear-gradient(135deg, rgba(102, 16, 242, 0.02) 0%, rgba(255, 255, 255, 1) 100%);
-  
+  --bg-techstack: linear-gradient(
+    135deg,
+    rgba(13, 110, 253, 0.03) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --bg-contact: linear-gradient(
+    135deg,
+    rgba(102, 16, 242, 0.02) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
   /* Text Colors */
   --text-primary: #212529;
   --text-secondary: #6c757d;
   --text-muted: #adb5bd;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 20px 60px rgba(13, 110, 253, 0.2);
   --shadow-colored: 0 8px 24px rgba(13, 110, 253, 0.3);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
   --transition-slow: 0.5s ease;
   --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   /* Spacing */
   --section-padding: 4rem 0;
   --section-padding-mobile: 2rem 0;
@@ -68,9 +76,9 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
@@ -122,7 +130,11 @@ div[class*="container"] {
 
 /* Utility Classes */
 .text-gradient {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--primary-purple) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -147,4 +159,3 @@ div[class*="container"] {
     scroll-behavior: auto !important;
   }
 }
-
