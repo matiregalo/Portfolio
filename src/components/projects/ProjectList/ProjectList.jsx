@@ -1,6 +1,7 @@
 import "./projects.css";
 import { useState, useRef, useEffect } from "react";
-import Proyect from "./Project/Project";
+import Project from "../Project/Project";
+
 const ProjectList = ({ projects }) => {
   const carouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,14 +20,12 @@ const ProjectList = ({ projects }) => {
       setCanScrollLeft(scrollLeft > 10);
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
 
-      // Detectar slide actual con mejor precisión
       const slides = carousel.querySelectorAll(".carousel__slide");
       if (slides.length === 0) return;
 
-      // Centro del viewport
       const viewportCenter = scrollLeft + clientWidth / 2;
 
-      // Casos extremos: si estamos al inicio o al final
+      // Edge cases: first and last slides
       if (scrollLeft <= 5) {
         setCurrentSlide(0);
         return;
@@ -37,7 +36,7 @@ const ProjectList = ({ projects }) => {
         return;
       }
 
-      // Buscar el slide más cercano al centro
+      // Find closest slide to viewport center
       let closestIndex = 0;
       let closestDistance = Infinity;
 
@@ -55,21 +54,17 @@ const ProjectList = ({ projects }) => {
 
       setCurrentSlide(closestIndex);
     };
-    const initTimer = setTimeout(() => {
-    handleScroll();
-  }, 150);
-  
-    carousel.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
 
-    // Recalcular cuando cambie el tamaño de la ventana
-    const handleResize = () => {
-      setTimeout(handleScroll, 100);
-    };
+    const initTimer = setTimeout(handleScroll, 150);
+
+    carousel.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    const handleResize = () => setTimeout(handleScroll, 100);
     window.addEventListener("resize", handleResize);
 
     return () => {
-          clearTimeout(initTimer);
+      clearTimeout(initTimer);
       carousel.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
@@ -81,14 +76,13 @@ const ProjectList = ({ projects }) => {
 
     const slides = carousel.querySelectorAll(".carousel__slide");
     const targetSlide = slides[index];
-
     if (!targetSlide) return;
 
     const carouselWidth = carousel.offsetWidth;
     const slideLeft = targetSlide.offsetLeft;
     const slideWidth = targetSlide.offsetWidth;
 
-    // Centrar el slide
+    // Center the slide in the viewport
     const scrollPosition = slideLeft - carouselWidth / 2 + slideWidth / 2;
 
     carousel.scrollTo({
@@ -112,18 +106,15 @@ const ProjectList = ({ projects }) => {
       <div className="container">
         <div className="text-center mb-5">
           <h2 className="section-title mb-3">Projects</h2>
-          <p className="section-lead">
-            Explore my projects
-          </p>
+          <p className="section-lead">Explore my projects</p>
         </div>
 
         <div className="carousel-wrapper">
-          {/* Botones de navegación */}
           <button
             className={`carousel-nav carousel-nav--left ${!canScrollLeft ? "carousel-nav--disabled" : ""}`}
             onClick={scrollLeft}
             disabled={!canScrollLeft}
-            aria-label="Anterior proyecto"
+            aria-label="Previous project"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +135,7 @@ const ProjectList = ({ projects }) => {
             className={`carousel-nav carousel-nav--right ${!canScrollRight ? "carousel-nav--disabled" : ""}`}
             onClick={scrollRight}
             disabled={!canScrollRight}
-            aria-label="Siguiente proyecto"
+            aria-label="Next project"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,29 +152,27 @@ const ProjectList = ({ projects }) => {
             </svg>
           </button>
 
-          {/* Carrusel con scroll-snap */}
           <div
             ref={carouselRef}
             className="carousel carousel--scroll-buttons carousel--scroll-markers"
           >
-              {projects.map((project, index) => (
-                <Proyect
-                  key={project.id}
-                  project={project}
-                  className="carousel__slide"
-                  dataLabel={`Slide ${index + 1}`}
-                />
-              ))}
+            {projects.map((project, index) => (
+              <Project
+                key={project.id}
+                project={project}
+                className="carousel__slide"
+                dataLabel={`Slide ${index + 1}`}
+              />
+            ))}
           </div>
 
-          {/* Indicadores de posición (dots) */}
           <div className="carousel-indicators">
             {projects.map((_, index) => (
               <button
                 key={index}
                 className={`carousel-dot ${currentSlide === index ? "carousel-dot--active" : ""}`}
                 onClick={() => scrollToSlide(index)}
-                aria-label={`Ir al proyecto ${index + 1}`}
+                aria-label={`Go to project ${index + 1}`}
               />
             ))}
           </div>
