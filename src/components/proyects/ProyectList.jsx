@@ -1,6 +1,6 @@
 import "./projects.css";
 import { useState, useRef, useEffect } from "react";
-
+import Proyect from "./Proyect/Proyect";
 const ProyectList = ({ projects }) => {
   const carouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,39 +20,39 @@ const ProyectList = ({ projects }) => {
       setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
 
       // Detectar slide actual con mejor precisión
-      const slides = carousel.querySelectorAll('.carousel__slide');
+      const slides = carousel.querySelectorAll(".carousel__slide");
       if (slides.length === 0) return;
-      
+
       // Centro del viewport
       const viewportCenter = scrollLeft + clientWidth / 2;
-      
+
       // Casos extremos: si estamos al inicio o al final
       if (scrollLeft <= 5) {
         setCurrentSlide(0);
         return;
       }
-      
+
       if (scrollLeft >= scrollWidth - clientWidth - 5) {
         setCurrentSlide(slides.length - 1);
         return;
       }
-      
+
       // Buscar el slide más cercano al centro
       let closestIndex = 0;
       let closestDistance = Infinity;
-      
+
       slides.forEach((slide, index) => {
         const slideLeft = slide.offsetLeft;
         const slideWidth = slide.offsetWidth;
         const slideCenter = slideLeft + slideWidth / 2;
         const distance = Math.abs(viewportCenter - slideCenter);
-        
+
         if (distance < closestDistance) {
           closestDistance = distance;
           closestIndex = index;
         }
       });
-      
+
       setCurrentSlide(closestIndex);
     };
 
@@ -75,18 +75,18 @@ const ProyectList = ({ projects }) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const slides = carousel.querySelectorAll('.carousel__slide');
+    const slides = carousel.querySelectorAll(".carousel__slide");
     const targetSlide = slides[index];
-    
+
     if (!targetSlide) return;
-    
+
     const carouselWidth = carousel.offsetWidth;
     const slideLeft = targetSlide.offsetLeft;
     const slideWidth = targetSlide.offsetWidth;
-    
+
     // Centrar el slide
-    const scrollPosition = slideLeft - (carouselWidth / 2) + (slideWidth / 2);
-    
+    const scrollPosition = slideLeft - carouselWidth / 2 + slideWidth / 2;
+
     carousel.scrollTo({
       left: scrollPosition,
       behavior: "smooth",
@@ -160,53 +160,16 @@ const ProyectList = ({ projects }) => {
           {/* Carrusel con scroll-snap */}
           <div
             ref={carouselRef}
-            className="carousel carousel--scroll-buttons carousel--scroll-markers carousel--inert"
+            className="carousel carousel--scroll-buttons carousel--scroll-markers"
           >
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="carousel__slide"
-                data-label={`Slide ${index + 1}`}
-              >
-                <div className="slide__content">
-                  <div className="slide__image-wrapper">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      loading="lazy"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "/logoMRTransparente.png";
-                      }}
-                    />
-                  </div>
-                  <div className="slide__info">
-                    <h3 className="slide__title">{project.title}</h3>
-                    <p className="slide__description">{project.description}</p>
-                    <div className="slide__links">
-                      <a
-                        href={project.demoLink}
-                        className="slide__btn slide__btn--demo"
-                        target={project.external ? "_blank" : "_self"}
-                        rel={
-                          project.external ? "noopener noreferrer" : undefined
-                        }
-                      >
-                        <span>Ver Demo</span>
-                      </a>
-                      <a
-                        href={project.codeLink}
-                        className="slide__btn slide__btn--code"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>Código</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+              {projects.map((project, index) => (
+                <Proyect
+                  key={project.id}
+                  project={project}
+                  className="carousel__slide"
+                  dataLabel={`Slide ${index + 1}`}
+                />
+              ))}
           </div>
 
           {/* Indicadores de posición (dots) */}
