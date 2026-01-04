@@ -6,7 +6,7 @@ import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import TechStack from "./components/pages/TechStack/TechStack";
 import Contact from "./components/pages/Contact/Contact";
-import ProyectsListContainer from "./components/proyects/containers/ProyectsListContainer";
+import Projects from "./components/proyects/Projects";
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/proyects" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/proyects" element={<ProyectsListContainer />} />
+          <Route path="/" element={<Projects />} />
           <Route path="/techStack" element={<TechStack />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

@@ -30,7 +30,7 @@ const NavBar = () => {
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item mx-2">
-                <Link className="nav-link text-dark" to="/" id="link-home">
+                <Link className="nav-link text-dark" to="/proyects" id="link-home">
                   Home
                 </Link>
               </li>
@@ -43,15 +43,15 @@ const NavBar = () => {
                   About
                 </Link>
               </li>
-              {/* <li className="nav-item mx-2">
+              <li className="nav-item mx-2">
                 <Link
                   className="nav-link text-dark"
-                  to="/proyects"
+                  to="/"
                   id="link-proyects"
                 >
                   Proyects
                 </Link>
-              </li> */}
+              </li>
               <li className="nav-item mx-2">
                 <Link
                   className="nav-link text-dark"

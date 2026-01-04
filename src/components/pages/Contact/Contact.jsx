@@ -24,6 +24,7 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     setStatus(null);
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_SERVICE_ID,
@@ -32,7 +33,8 @@ const Contact = () => {
         import.meta.env.VITE_EMAIL_PUBLIC_KEY,
       )
       .then(
-        () => {
+        (result) => {
+          console.log("Email enviado exitosamente!", result.text);
           setStatus({
             message: "Message sent successfully! I'll get back to you soon.",
             type: "success",
@@ -40,7 +42,8 @@ const Contact = () => {
           e.target.reset();
           setIsLoading(false);
         },
-        () => {
+        (error) => {
+          console.error("Error al enviar email:", error);
           setStatus({
             message:
               "An error occurred while sending the message. Please try again later.",
