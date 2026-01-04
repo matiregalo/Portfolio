@@ -11,12 +11,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Landing Page Responsive",
+    title: "E-commerce API Backend",
     description:
-      "Frontend de Landing page responsive construida para prácticas de maquetación moderna.",
-    image: "/assets/landing.jpg",
-    demoLink: "/projects/landingpageresponsive",
-    codeLink: "https://github.com/ManRio/landingPageResponsive",
+"Backend E-commerce con Node.js y Express. API RESTful para productos y carritos con paginación, filtros y ordenamiento. MongoDB con Mongoose. Arquitectura MVC, vistas Handlebars y testing integral.",    image: "/assets/backend-products-api-regalo.jpeg",
+    demoLink: "https://backend-products-api-regalo.vercel.app/",
+    codeLink: "https://github.com/matiregalo/Entrega-N-1-DesarrolloServidor.git",
+    technologies: ["Node.js", "Express.js", "MongoDB", "Handlebars", "REST API"],
     external: false,
   },
   {
