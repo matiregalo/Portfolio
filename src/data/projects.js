@@ -1,12 +1,12 @@
 const projects = [
   {
     id: 1,
-    title: "StockIt",
-    description:
-      "Gestión de inventarios moderna para almacenes y tiendas. Control de stock, ventas y clientes.",
-    image: "/assets/LogoStockIt.png",
-    demoLink: "/projects/stockit",
-    codeLink: "https://github.com/ManRio/StockIt",
+    title: "Ecommerce-iphones",
+    description: "E-commerce React con catálogo dinámico, carrito persistente y checkout. Autenticación Firebase con verificación por email. SEO avanzado con metaetiquetas, Schema.org y Open Graph. Base de datos Firestore.",
+    image: "/assets/ecommerce-iphones.jpeg",
+    demoLink: "https://ecommerce-iphones.vercel.app/",
+    codeLink: "https://github.com/matiregalo/Entrega-N-1-ecommerce",
+    technologies: ["React", "Firebase (Auth + Firestore)",  "Context API", "Vite", "SEO",],
     external: false,
   },
   {

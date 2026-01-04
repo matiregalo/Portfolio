@@ -16,6 +16,15 @@ const Project = ({ project, className, dataLabel }) => {
         <div className="slide__info">
           <h3 className="slide__title">{project.title}</h3>
           <p className="slide__description">{project.description}</p>
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="slide__technologies">
+              {project.technologies.map((tech, index) => (
+                <span key={index} className="tech-badge">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
           <div className="slide__links">
             <a
               href={project.demoLink}

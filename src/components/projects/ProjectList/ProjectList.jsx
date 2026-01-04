@@ -104,7 +104,7 @@ const ProjectList = ({ projects }) => {
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <div className="text-center mb-5">
+        <div className="text-center mb-4">
           <h2 className="section-title mb-3">Projects</h2>
           <p className="section-lead">Explore my projects</p>
         </div>
