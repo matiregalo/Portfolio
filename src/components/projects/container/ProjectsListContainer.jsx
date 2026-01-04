@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { getProjects } from "../../data/projects";
-import ProjectList from "./ProjectList";
+import { getProjects } from "../../../data/projects";
+import ProjectList from "../ProjectList";
 
 const ProjectsListContainer = () => {
   const [projects, setProjects] = useState([]);
