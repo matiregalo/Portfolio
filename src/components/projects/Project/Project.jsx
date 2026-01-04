@@ -1,4 +1,4 @@
-const Proyect = ({ project, className, dataLabel }) => {
+const Project = ({ project, className, dataLabel }) => {
   return (
     <div className={className} data-label={dataLabel}>
       <div className="slide__content">
@@ -40,4 +40,4 @@ const Proyect = ({ project, className, dataLabel }) => {
   );
 };
 
-export default Proyect;
+export default Project;

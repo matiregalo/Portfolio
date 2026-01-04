@@ -1,7 +1,7 @@
 import "./projects.css";
 import { useState, useRef, useEffect } from "react";
-import Proyect from "./Proyect/Proyect";
-const ProyectList = ({ projects }) => {
+import Proyect from "./Project/Project";
+const ProjectList = ({ projects }) => {
   const carouselRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -55,7 +55,10 @@ const ProyectList = ({ projects }) => {
 
       setCurrentSlide(closestIndex);
     };
-
+    const initTimer = setTimeout(() => {
+    handleScroll();
+  }, 150);
+  
     carousel.addEventListener("scroll", handleScroll);
     handleScroll(); // Initial check
 
@@ -66,6 +69,7 @@ const ProyectList = ({ projects }) => {
     window.addEventListener("resize", handleResize);
 
     return () => {
+          clearTimeout(initTimer);
       carousel.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
@@ -107,9 +111,9 @@ const ProyectList = ({ projects }) => {
     <section id="projects" className="projects-section">
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="section-title mb-3">Proyectos</h2>
+          <h2 className="section-title mb-3">Projects</h2>
           <p className="section-lead">
-            Explora mi portafolio de trabajos y proyectos realizados
+            Explore my projects
           </p>
         </div>
 
@@ -189,4 +193,4 @@ const ProyectList = ({ projects }) => {
   );
 };
 
-export default ProyectList;
+export default ProjectList;

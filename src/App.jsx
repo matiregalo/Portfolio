@@ -6,7 +6,7 @@ import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import TechStack from "./components/pages/TechStack/TechStack";
 import Contact from "./components/pages/Contact/Contact";
-import ProjectsListContainer from "./components/proyects/ProyectsListContainer";
+import ProjectsListContainer from "./components/projects/ProjectsListContainer";
 
 function App() {
   return (

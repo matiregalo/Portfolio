@@ -81,10 +81,10 @@ const projects = [
   },
 ];
 
-const getProyects = () => {
+const getProjects = () => {
   return new Promise((resolve) => {
     resolve(projects);
   });
 };
 
-export { getProyects };
+export { getProjects };
