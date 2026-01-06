@@ -98,10 +98,7 @@
 }
 
 .carousel-nav:hover:not(:disabled) {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue) 0%
-  );
+  background: linear-gradient(135deg, var(--primary-blue) 0%);
   color: var(--white);
   transform: translateY(-50%) scale(1.12);
   box-shadow: var(--shadow-colored);
@@ -167,20 +164,14 @@
 }
 
 .carousel-dot--active {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue) 0%
-  );
+  background: linear-gradient(135deg, var(--primary-blue) 0%);
   width: 32px;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(13, 110, 253, 0.4);
 }
 
 .carousel-dot--active:hover {
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue) 0%
-  );
+  background: linear-gradient(135deg, var(--primary-blue) 0%);
   border-color: transparent;
 }
 
@@ -257,10 +248,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-blue) 0%
-  );
+  background: linear-gradient(90deg, var(--primary-blue) 0%);
   opacity: 0;
   transition: opacity var(--transition-base);
 }
@@ -281,20 +269,14 @@
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(
-    135deg,
-    var(--primary-blue-ultra-light) 0%
-  );
+  background: linear-gradient(135deg, var(--primary-blue-ultra-light) 0%);
 }
 
 .slide__image-wrapper::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%);
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--transition-base);

@@ -2,31 +2,51 @@ const projects = [
   {
     id: 1,
     title: "Ecommerce-iphones",
-    description: "E-commerce React con catálogo dinámico, carrito persistente y checkout. Autenticación Firebase con verificación por email. SEO avanzado con metaetiquetas, Schema.org y Open Graph. Base de datos Firestore.",
+    description:
+      "React e-commerce platform with dynamic catalog, persistent cart, and checkout. Firebase authentication with email verification. Advanced SEO with meta tags, Schema.org, and Open Graph. Firestore database.",
     image: "/assets/ecommerce-iphones.jpeg",
     demoLink: "https://ecommerce-iphones.vercel.app/",
     codeLink: "https://github.com/matiregalo/Entrega-N-1-ecommerce",
-    technologies: ["React", "Firebase (Auth + Firestore)",  "Context API", "Vite", "SEO",],
+    technologies: [
+      "React",
+      "Firebase (Auth + Firestore)",
+      "Context API",
+      "Vite",
+      "SEO",
+    ],
     external: false,
   },
   {
     id: 2,
     title: "E-commerce API Backend",
     description:
-"Backend E-commerce con Node.js y Express. API RESTful para productos y carritos con paginación, filtros y ordenamiento. MongoDB con Mongoose. Arquitectura MVC, vistas Handlebars y testing integral.",    image: "/assets/backend-products-api-regalo.jpeg",
+      "E-commerce backend built with Node.js and Express. RESTful API for products and shopping carts with pagination, filters, and sorting. MongoDB with Mongoose. MVC architecture, Handlebars views, and comprehensive testing.",
+    image: "/assets/backend-products-api-regalo.jpeg",
     demoLink: "https://backend-products-api-regalo.vercel.app/",
-    codeLink: "https://github.com/matiregalo/Entrega-N-1-DesarrolloServidor.git",
-    technologies: ["Node.js", "Express.js", "MongoDB", "Handlebars", "REST API"],
+    codeLink:
+      "https://github.com/matiregalo/Entrega-N-1-DesarrolloServidor.git",
+    technologies: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Handlebars",
+      "REST API",
+    ],
     external: false,
   },
   {
     id: 3,
-    title: "Jamar",
+    title: "Library management system",
     description:
-      "Aplicación de gestión empresarial con Deploy online para la promoción de un servicio de gestión de contenidos, redes sociales y páginas web.",
-    image: "/assets/jamar.jpg",
-    demoLink: "http://jamarmedia.es/inicio",
-    codeLink: "https://github.com/ManRio/jamar",
+      "Java bookstore management system: register publishers, genres, authors, books; process sales; check stock; upload photos; export CSV. Features persistent data & modern Windows-style interface with search capabilities.",
+    image: "/assets/Library management system.jpeg",
+    demoLink: "https://youtu.be/gipJ6M7KNak",
+    codeLink:
+      "https://github.com/matiregalo/Sistema-de-gestion-de-una-libreria",
+      technologies: [
+      "Java",
+      "Java Swing",
+    ],
     external: true,
   },
   {
@@ -38,7 +58,7 @@ const projects = [
     demoLink: "/projects/ProjectNewsReader",
     codeLink: "https://github.com/ManRio/newsreader",
     external: false,
-  }
+  },
 ];
 
 const getProjects = () => {
