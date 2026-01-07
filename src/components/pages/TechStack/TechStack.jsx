@@ -16,6 +16,9 @@ import {
   SiFirebase,
   SiCypress,
   SiBlazor,
+  SiVite,
+  SiJest,
+  SiLinux,
 } from "react-icons/si";
 import "./TechStack.css";
 
@@ -142,6 +145,18 @@ const TechStack = () => {
                         <SiBlazor className="tech-icon" />
                         <span>Blazor</span>
                       </div>
+                      <div className="tech-item">
+                        <SiVite className="tech-icon" />
+                        <span>Vite</span>
+                      </div>
+                      <div className="tech-item">
+                        <SiJest className="tech-icon" />
+                        <span>Jest</span>
+                      </div>
+                      <div className="tech-item">
+                        <SiLinux className="tech-icon" />
+                        <span>Linux</span>
+                      </div>
                       {/* Duplicate for infinite loop */}
                       <div className="tech-item">
                         <SiReact className="tech-icon" />
@@ -218,6 +233,18 @@ const TechStack = () => {
                       <div className="tech-item">
                         <SiBlazor className="tech-icon" />
                         <span>Blazor</span>
+                      </div>
+                       <div className="tech-item">
+                        <SiVite className="tech-icon" />
+                        <span>Vite</span>
+                      </div>
+                      <div className="tech-item">
+                        <SiJest className="tech-icon" />
+                        <span>Jest</span>
+                      </div>
+                      <div className="tech-item">
+                        <SiLinux className="tech-icon" />
+                        <span>Linux</span>
                       </div>
                     </div>
                   </div>
