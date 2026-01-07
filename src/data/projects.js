@@ -1,6 +1,26 @@
 const projects = [
   {
     id: 1,
+    title: "Catalog Management System",
+    description:
+      "Catalog management system with automatic duplicate detection via similarity analysis. Features CRUD operations, smart alerts, merging/discarding, full traceability, and stock/pricing optimization for businesses with  manual entries.",
+    image: "/assets/Catalog Management System.jpeg",
+    demoLink:
+      "https://neardupfinder-web-dyewecbvd2g0fkev.brazilsouth-01.azurewebsites.net/",
+    codeLink:
+      "https://github.com/matiregalo/Sistema-de-gestion-de-catalogo-de-items-NearDupFinder",
+    technologies: [
+      "Blazor",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "Azure",
+      "Docker",
+    ],
+    external: false,
+  },
+  {
+    id: 2,
     title: "Ecommerce-iphones",
     description:
       "React e-commerce platform with dynamic catalog, persistent cart, and checkout. Firebase authentication with email verification. Advanced SEO with meta tags, Schema.org, and Open Graph. Firestore database.",
@@ -17,7 +37,7 @@ const projects = [
     external: false,
   },
   {
-    id: 2,
+    id: 3,
     title: "E-commerce API Backend",
     description:
       "E-commerce backend built with Node.js and Express. RESTful API for products and shopping carts with pagination, filters, and sorting. MongoDB with Mongoose. MVC architecture, Handlebars views, and comprehensive testing.",
@@ -35,7 +55,7 @@ const projects = [
     external: false,
   },
   {
-    id: 3,
+    id: 4,
     title: "Library management system",
     description:
       "Java bookstore management system: register publishers, genres, authors, books; process sales; check stock; upload photos; export CSV. Features persistent data & modern Windows-style interface with search capabilities.",
@@ -43,21 +63,8 @@ const projects = [
     demoLink: "https://youtu.be/gipJ6M7KNak",
     codeLink:
       "https://github.com/matiregalo/Sistema-de-gestion-de-una-libreria",
-      technologies: [
-      "Java",
-      "Java Swing",
-    ],
+    technologies: ["Java", "Java Swing"],
     external: true,
-  },
-  {
-    id: 4,
-    title: "NewsReader",
-    description:
-      "Lector de noticias personalizadas por IA con perfil y favoritos. Consumo de API de noticias y generación de resúmenes con OpenAI.",
-    image: "/assets/NewsReaderFeed.png",
-    demoLink: "/projects/ProjectNewsReader",
-    codeLink: "https://github.com/ManRio/newsreader",
-    external: false,
   },
 ];
 
