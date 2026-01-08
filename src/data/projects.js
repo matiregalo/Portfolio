@@ -6,7 +6,7 @@ const projects = [
       "Catalog management system with automatic duplicate detection via similarity analysis. Features CRUD operations, smart alerts, merging/discarding, full traceability, and stock/pricing optimization for businesses with  manual entries.",
     image: "/assets/Catalog Management System.jpeg",
     demoLink:
-      "https://neardupfinder-web-dyewecbvd2g0fkev.brazilsouth-01.azurewebsites.net/",
+      "https://neardupfinder-web-dyewecbvd2g0fkev.brazilsouth-01.azurewebsites.net/login",
     codeLink:
       "https://github.com/matiregalo/Sistema-de-gestion-de-catalogo-de-items-NearDupFinder",
     technologies: [
