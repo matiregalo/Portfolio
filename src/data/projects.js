@@ -18,6 +18,7 @@ const projects = [
       "Docker",
     ],
     external: false,
+    hasDemo: false,
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const projects = [
       "SEO",
     ],
     external: false,
+    hasDemo: false,
   },
   {
     id: 3,
@@ -53,6 +55,7 @@ const projects = [
       "REST API",
     ],
     external: false,
+    hasDemo: false,
   },
   {
     id: 4,
@@ -60,11 +63,12 @@ const projects = [
     description:
       "Java bookstore management system: register publishers, genres, authors, books; process sales; check stock; upload photos; export CSV. Features persistent data & modern Windows-style interface with search capabilities.",
     image: "/assets/Library management system.jpeg",
-    demoLink: "https://youtu.be/gipJ6M7KNak",
+    demoLink: "https://www.youtube.com/watch?v=XZOR6LPoYJo",
     codeLink:
       "https://github.com/matiregalo/Sistema-de-gestion-de-una-libreria",
     technologies: ["Java", "Java Swing"],
     external: true,
+    hasDemo: true,
   },
 ];
 
